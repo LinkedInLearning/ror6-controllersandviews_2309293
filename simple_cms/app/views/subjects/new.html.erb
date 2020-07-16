@@ -1,0 +1,15 @@
+<%= link_to("<< Back to List", subjects_path, :class => 'back-link') %>
+
+<div class="subjects new">
+  <h2>Create Subject</h2>
+
+  <%= form_for(@subject) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Create Subject") %>
+    </div>
+
+  <% end %>
+</div>

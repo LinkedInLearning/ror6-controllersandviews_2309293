@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  permalink: MyString
+  position: 1
+  visible: false
+  content: MyText
+
+two:
+  name: MyString
+  permalink: MyString
+  position: 1
+  visible: false
+  content: MyText
