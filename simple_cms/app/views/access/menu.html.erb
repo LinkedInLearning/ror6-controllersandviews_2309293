@@ -1,8 +1,8 @@
 <div class="access index">
   <h1>Menu</h1>
 
-  <p>You are logged in as <%= @username %></p>
-  
+  <p>You are logged in as <%= @username %> (<%= @user_id %>)</p>
+
   <ul>
     <li><%= link_to('Manage Subjects', subjects_path) %></li>
     <li><%= link_to('Manage Pages', pages_path) %></li>
