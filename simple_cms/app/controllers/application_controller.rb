@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
   layout 'application'
-  
+
   protect_from_forgery with: :exception
 
   before_action :set_username
@@ -24,6 +24,11 @@ class ApplicationController < ActionController::Base
         flash[:notice] = 'Please log in'
         redirect_to(login_path)
       end
+    end
+
+    def render_404
+      filepath = Rails.root.join('public', '404.html')
+      render(file: filepath, status: 404, layout: false) and return
     end
 
 end

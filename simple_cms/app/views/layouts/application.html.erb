@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SimpleCms</title>
+    <title>Simple CMS<%= ' - ' + yield(:title) if content_for?(:title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -14,9 +14,15 @@
 
     <header style="height: 1em; padding: 1em; margin-bottom: 1em; background: #0099CC;">
       Simple CMS
+      <% if session[:user_id].present? %>
+        <span style="float: right;">
+          User: <%= @username %> (<%= link_to('logout', logout_path, method: :delete) %>)
+        </span>
+      <% end %>
     </header>
 
     <div id="content" style="min-height: 400px;">
+      <%= render(partial: 'application/flash') %>
       <%= yield %>
     </div>
 
