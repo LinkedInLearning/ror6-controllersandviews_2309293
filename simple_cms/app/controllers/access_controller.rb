@@ -1,5 +1,7 @@
 class AccessController < ApplicationController
 
+  before_action :confirm_logged_in, :except => [:new, :create]
+
   # display menu
   def menu
     set_username
@@ -23,6 +25,7 @@ class AccessController < ApplicationController
   # logout user
   def destroy
     # do logout process here
+    session[:user_id] = nil
     redirect_to(login_path)
   end
 
