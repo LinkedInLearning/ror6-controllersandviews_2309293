@@ -4,7 +4,6 @@ class AccessController < ApplicationController
 
   # display menu
   def menu
-    set_username
     @user_id = session[:user_id]
   end
 
@@ -15,9 +14,10 @@ class AccessController < ApplicationController
   # process login form
   def create
     # do login process here
-    logger.info("*** Login process started")
+    logger.info("*** Login User #{params[:username]}")
     cookies[:username] = params[:username]
     session[:user_id] = 1483
+    cookies[:language] = 'en'
     flash[:notice] = "Log in successful"
     redirect_to(menu_path)
   end
@@ -25,6 +25,7 @@ class AccessController < ApplicationController
   # logout user
   def destroy
     # do logout process here
+    logger.info("*** Logout User #{session[:user_id]}")
     session[:user_id] = nil
     redirect_to(login_path)
   end
