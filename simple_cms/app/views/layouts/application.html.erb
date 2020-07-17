@@ -10,6 +10,18 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <header style="height: 1em; padding: 1em; margin-bottom: 1em; background: #0099CC;">
+      Simple CMS
+    </header>
+
+    <div id="content" style="min-height: 400px;">
+      <%= yield %>
+    </div>
+
+    <footer style="height: 1em; padding: 1em; margin-top: 1em; background: #0099CC;">
+      Copyright <%= Time.now.year %>
+    </footer>
+
   </body>
 </html>
