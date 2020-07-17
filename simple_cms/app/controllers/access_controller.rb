@@ -2,7 +2,7 @@ class AccessController < ApplicationController
 
   # display menu
   def menu
-    @username = cookies[:username]
+    set_username
     @user_id = session[:user_id]
   end
 
