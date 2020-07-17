@@ -1,7 +1,5 @@
 class DemoController < ApplicationController
 
-  layout false
-
   def index
     # render(plain: "Just render text.")
     #

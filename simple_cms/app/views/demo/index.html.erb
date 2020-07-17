@@ -1,3 +1,7 @@
 <h1>This is the home page.</h1>
 
 <%= link_to('All subjects', subjects_path) %>
+
+<% content_for(:script) do %>
+  <script>alert('Hello!');</script>
+<% end %>
