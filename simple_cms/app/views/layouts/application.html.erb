@@ -16,7 +16,10 @@
       Simple CMS
       <% if session[:user_id].present? %>
         <span style="float: right;">
-          User: <%= @username %> (<%= link_to('logout', logout_path, method: :delete) %>)
+          User: <%= @username %>
+          <%= link_to(logout_path, method: :delete) do %>
+            <%= image_tag('icon_logoff.png', size: '14x14', title: 'logout') %>
+          <% end %>
         </span>
       <% end %>
     </header>
