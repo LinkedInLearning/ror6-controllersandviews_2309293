@@ -12,7 +12,7 @@
 
   <body>
 
-    <header style="height: 1em; padding: 1em; margin-bottom: 1em; background: #0099CC;">
+    <header>
       Simple CMS
       <% if session[:user_id].present? %>
         <span style="float: right;">
@@ -21,12 +21,12 @@
       <% end %>
     </header>
 
-    <div id="content" style="min-height: 400px;">
+    <div id="content">
       <%= render(partial: 'application/flash') %>
       <%= yield %>
     </div>
 
-    <footer style="height: 1em; padding: 1em; margin-top: 1em; background: #0099CC;">
+    <footer>
       Copyright <%= Time.now.year %>
     </footer>
 
