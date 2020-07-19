@@ -19,3 +19,13 @@ footer {
   margin-top: 1em;
   background-image: image-url('gradient.jpg');
 }
+
+span.status {
+  display: block;
+  width: 10px; height: 10px;
+  margin: 0.25em; padding: 0;
+  border: 1px solid black;
+
+  &.true { background: green; }
+  &.false { background: red; }
+}
