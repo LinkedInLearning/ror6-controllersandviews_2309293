@@ -75,6 +75,7 @@ GEM
     concurrent-ruby (1.1.5)
     crass (1.0.6)
     erubi (1.9.0)
+    execjs (2.7.0)
     ffi (1.12.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -107,8 +108,6 @@ GEM
     puma (4.3.1)
       nio4r (~> 2.0)
     rack (2.1.1)
-    rack-proxy (0.6.5)
-      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.0.2.1)
@@ -176,6 +175,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     web-console (4.0.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -185,10 +186,6 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (>= 3.0, < 4.0)
-    webpacker (4.2.2)
-      activesupport (>= 4.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -214,9 +211,9 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   tzinfo-data
+  uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
   webdrivers
-  webpacker (~> 4.0)
 
 RUBY VERSION
    ruby 2.6.5p114
