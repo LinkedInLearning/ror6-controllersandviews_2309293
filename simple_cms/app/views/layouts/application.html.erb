@@ -6,14 +6,14 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= yield(:script) %>
   </head>
 
   <body>
 
     <header>
-      Simple CMS
+      <span id="logo">Simple CMS</span>
       <% if session[:user_id].present? %>
         <span style="float: right;">
           User: <%= @username %>
