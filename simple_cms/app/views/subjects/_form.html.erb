@@ -7,10 +7,14 @@
   </tr>
   <tr>
     <th>Position</th>
-    <td><%= f.text_field(:position) %></td>
+    <% count = Subject.count %>
+    <td><%= f.select(:position, 1..count) %></td>
   </tr>
   <tr>
     <th>Visible</th>
-    <td><%= f.text_field(:visible) %></td>
+    <td>
+      <%= f.radio_button(:visible, '1') %> Yes
+      <%= f.radio_button(:visible, '0') %> No
+    </td>
   </tr>
 </table>

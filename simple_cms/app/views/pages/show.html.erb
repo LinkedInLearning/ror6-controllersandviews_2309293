@@ -28,15 +28,15 @@
     </tr>
     <tr>
       <th>Content</th>
-      <td><%= @page.content %></td>
+      <td><%= simple_format(word_wrap(strip_tags(@page.content.to_s))) %></td>
     </tr>
     <tr>
       <th>Created</th>
-      <td><%= @page.created_at %></td>
+      <td><%= @page.created_at.to_s(:long) %></td>
     </tr>
     <tr>
       <th>Updated</th>
-      <td><%= @page.updated_at %></td>
+      <td><%= @page.updated_at.to_s(:long) %></td>
     </tr>
   </table>
 

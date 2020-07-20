@@ -2,8 +2,8 @@
 
 <table summary="Page form fields">
   <tr>
-    <th>Subject ID</th>
-    <td><%= f.text_field(:subject_id) %></td>
+    <th>Subject</th>
+    <td><%= f.select(:subject_id, Subject.all.map {|s| [s.name, s.id]}) %></td>
   </tr>
   <tr>
     <th>Name</th>
@@ -15,11 +15,12 @@
   </tr>
   <tr>
     <th>Position</th>
-    <td><%= f.text_field(:position) %></td>
+    <% count = Page.count %>
+    <td><%= f.select(:position, 1..count) %></td>
   </tr>
   <tr>
     <th>Visible</th>
-    <td><%= f.text_field(:visible) %></td>
+    <td><%= f.check_box(:visible) %></td>
   </tr>
   <tr>
     <th>Content</th>

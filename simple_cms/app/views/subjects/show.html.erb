@@ -19,12 +19,16 @@
       <td><%= @subject.visible ? 'true' : 'false' %></td>
     </tr>
     <tr>
+      <th>Pages</th>
+      <td><%= pluralize(@subject.pages.count, 'page') %></td>
+    </tr>
+    <tr>
       <th>Created</th>
-      <td><%= @subject.created_at %></td>
+      <td><%= @subject.created_at.to_s(:long) %></td>
     </tr>
     <tr>
       <th>Updated</th>
-      <td><%= @subject.updated_at %></td>
+      <td><%= @subject.updated_at.strftime("%m/%d/%Y %I:%M %p") %></td>
     </tr>
   </table>
 
