@@ -15,7 +15,7 @@
   </tr>
   <tr>
     <th>Position</th>
-    <% count = Page.count %>
+    <% count = Page.count + (f.object.new_record? ? 1 : 0) %>
     <td><%= f.select(:position, 1..count) %></td>
   </tr>
   <tr>
