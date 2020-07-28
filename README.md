@@ -3,7 +3,6 @@ This is the repository for the LinkedIn Learning course Ruby on Rails 6 Controll
 
 [![COURSENAME](COURSEIMAGE)](LICOURSEURL)
 
-[COURSEDESCRIPTION]
 
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
