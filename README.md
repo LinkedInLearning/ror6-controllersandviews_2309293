@@ -1,7 +1,7 @@
 # Ruby on Rails 6 Controllers and Views
 This is the repository for the LinkedIn Learning course Ruby on Rails 6 Controllers and Views. The full course is available from [LinkedIn Learning](LICOURSEURL).
 
-[![COURSENAME](COURSEIMAGE)](LICOURSEURL)
+[![Ruby on Rails 6: Controllers and Views](COURSEIMAGE)](LICOURSEURL)
 
 
 ## Instructions
